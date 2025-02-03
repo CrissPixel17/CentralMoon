@@ -4,6 +4,9 @@ from django.core.mail import send_mail
 from django.conf import settings
 from gestionVideojuegos.models import Videojuegos, Consola
 
+def principal(request):
+    return render(request,"index.html",{"proyecto":"Mi Proyecto"})
+
 def inicio(request):
     return render(request,"inicio.html",{"proyecto":"Mi Proyecto"})
 
