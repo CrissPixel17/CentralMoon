@@ -18,11 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import  inicio, consolas, videojuegos, formulario, buscar, buscar_consolas
+from .views import  inicio, consolas, videojuegos, formulario, buscar, buscar_consolas, principal
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio, name="inicio"),
+    path('', principal, name="index.html"),
     path('inicio/', inicio),
     path('consolas/', consolas),
     path('juegos/', videojuegos),
