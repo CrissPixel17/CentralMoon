@@ -1,0 +1,94 @@
+body{
+    padding-top: 0px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: initial;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* Centra los items verticalmente */
+}
+
+.navbar li {
+    position: relative;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar li a {
+    color: white;
+    text-align: center;
+    display: flex;
+    padding: 0px 16px;
+    margin-top: 35px;
+    position: relative;
+    font-size: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    /* Suaviza el efecto hover */
+    border-left: 1px white solid;
+}
+
+/* Navbar como contenedor */
+.navbar {
+    box-sizing: border-box;
+    font-family: "Jersey 15", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100px; /* Ajusta según el contenido */
+    padding: 0px 20px;
+    z-index: 1000;
+}
+
+.navbar li a:hover {
+    color: darkgrey;
+    transition: 0.5s;
+}
+
+.navbar li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;  /* Asegura que ocupe todo el ancho del elemento */
+    height: 5px;  /* Grosor del borde superior */
+    background-color: cyan;  /* Color del margen */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.navbar li:hover::before {
+    opacity: 1; /* Hace visible el margen al pasar el cursor */
+}
+
+/* Sprite animado */
+.animated-character {
+    position: absolute;
+    right: 200px;
+    bottom: 0; /* Ajusta según sea necesario */
+    width: 100px; /* Tamaño de un solo fotograma */
+    height: 100px; /* Ajusta al tamaño real del sprite */
+    background-image: url('/media/chicaframe.png');
+    background-repeat: no-repeat;
+    background-size: 400px auto; /* Ajusta según cantidad de frames */
+    animation: runAnimation 0.9s steps(4) infinite;
+}
+
+/* Animación */
+@keyframes runAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: -400px 0; } /* Ajusta según número de frames */
+}
+
+.logo{
+    width: 180px;
+    height: auto;
+}

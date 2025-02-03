@@ -1,0 +1,45 @@
+body {
+    background: radial-gradient(ellipse at left, #d0d3d4 , #797d7f );
+    margin: 0; /* Elimina márgenes por defecto del body */
+    padding: 0; /* Elimina el padding por defecto */
+    width: 100%; /* Ancho completo de la pantalla */
+    height: 100vh; /* Alto completo de la pantalla */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+a {
+    position: absolute; /* Ajusta la posición del enlace respecto al contenedor */
+    bottom: 10px; /* Separación desde la parte inferior */
+    left: 10px; /* Separación desde la parte izquierda */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: 1px solid black; /* Borde del enlace */
+    padding: 10px 20px; /* Espacio interno (ancho y alto) */
+    border-radius: 5px; /* Esquinas redondeadas */
+    background-color: #424949; /* Color de fondo */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
+}
+
+/* Efecto al pasar el cursor */
+a:hover {
+    background-color: #515a5a; /* Cambia el fondo a un tono más oscuro */
+    color: lightgray; /* Cambia el color del texto */
+    border-color: darkgray; /* Cambia el color del borde */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para un efecto flotante */
+}
+
+.Fant {
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    max-height: 100%; /* Ajusta la imagen para que no sobrepase el contenedor */
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+}
+
+p{
+    font-family:"Nunito", sans-serif ;
+    font-size: 20px;
+}
+

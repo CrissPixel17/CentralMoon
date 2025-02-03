@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block body_class %}formulario-fondo{% endblock %}
+
+{% block title %}Formulario{% endblock title %}
+{% block content %}
+
+<form class="formulario" action="/formulario/" method="POST">{% csrf_token %}
+    <h1>Tu opinion cuenta</h1>
+    <p>Titulo de Videojuego: <input type="text" name="asunto" placeholder="Escribe el titulo aquí"></p>
+    <p>Email: <input type="text" name="email" placeholder="Tu correo electrónico"></p>
+    <p>¿Por qué deberia estar en la lista?: <textarea name="mensaje" rows="5" cols="40" placeholder="Escribe tu opinion aquí"></textarea></p>
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock content %}

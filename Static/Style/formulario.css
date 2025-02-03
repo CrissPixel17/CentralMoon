@@ -1,0 +1,73 @@
+body.formulario-fondo{
+    margin: 0;
+    background-image: url('/media/peakpx.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* Estilo del contenedor del formulario */
+.formulario {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrado horizontal y margen superior/inferior */
+    font-family: "Exo", serif;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); /* Borde alrededor del formulario */
+    backdrop-filter: blur(10px);
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto elegante */
+    box-sizing: border-box;
+}
+
+/* Estilo para las etiquetas y los campos de entrada */
+.formulario p {
+    margin-bottom: 15px; /* Espacio entre campos */
+    font-size: 15px;
+    color: #333;
+}
+
+.formulario input[type="text"],
+.formulario textarea {
+    width: 96%; /* Asegura que los campos ocupen todo el ancho */
+    padding: 10px;
+    margin-top: 5px; /* Separación entre etiqueta y campo */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); /* Borde de los campos */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 14px;
+    font-family: inherit;
+}
+
+
+.formulario input[type="text"]:focus,
+.formulario textarea:focus {
+    border-color: #007BFF; /* Cambia el color del borde al enfocar */
+    outline: none; /* Quita el borde exterior del navegador */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave */
+}
+
+/* Estilo del botón */
+.formulario input[type="submit"] {
+    width: 100%;
+    background-color: whitesmoke; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 15px 20px;
+    font-size: 16px;
+    font-family: "Exo";
+    font-weight: 500;
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor a una mano */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: white; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilo para el área de texto */
+.formulario textarea {
+    resize: none; /* Evita el redimensionamiento del área de texto */
+}

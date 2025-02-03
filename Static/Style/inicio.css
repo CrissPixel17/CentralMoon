@@ -1,0 +1,16 @@
+body.inicio{
+    margin: 0;
+    background-image: url('/media/peakpx.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.container-inicio{
+    width: 35%;
+    height: auto;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* Blanco con 50% de transparencia */
+    padding: 20px; /* Agrega espacio interno */
+}

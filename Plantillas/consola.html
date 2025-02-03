@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% block title %}Consolas{% endblock title %}
+
+{% block body_class %}consola{% endblock %}
+
+{% block content %}
+
+<header class="container-consola-presentacion">
+    <section class="container-date-console">
+        <h1>Consolas</h1>
+        <p>A lo largo de la historia, algunas consolas han dejado una huella imborrable en la industria de los videojuegos, definiendo generaciones y revolucionando la forma en que jugamos. Desde los inicios con el Atari 2600 hasta la innovación híbrida de la Nintendo Switch, cada una de estas plataformas ha introducido nuevas tecnologías, franquicias icónicas y experiencias inolvidables. En esta sección, exploramos las consolas más influyentes, aquellas que cambiaron las reglas del juego y moldearon el mundo de los videojuegos tal como lo conocemos hoy.</p>
+    </section>
+    <section>
+        <form class="buscador-consolas" action="/buscar_consola/" method="get">
+            <input type="text" name="sbd" placeholder="Buscar...">
+            <input type="submit" value="Buscar">
+        </form>
+    </section>
+</header>
+{% if mensaje %}
+    <div class="mensaje-error">
+        <img src="{{ imagen_error }}" alt="Mensaje de error">
+        <p>{{ mensaje }}</p>
+    </div>
+{% endif %}
+
+<div class="container-card-consola">
+    {% if consolas %}
+        {% for consola in consolas %}
+            <div class="card-consola">
+                {% if consola.imagen %}
+                    <img src="{{ consola.imagen.url }}" alt="{{consola.nombre}}">
+                {% else %}
+                    <img src="https://via.placeholder.com/150x100" alt="Imagen no disponible">
+                {% endif %}
+                <h2>{{ consola.nombre }}</h2>
+                <div class="consola-card-content">
+                    <p>{{ consola.descripcion }}</p>
+                    <p><strong>Fecha de Lanzamiento:</strong>{{ consola.periodo_duracion|default:"Fecha no disponible" }}</p>
+                    <p><strong>Empresa: </strong>{{ consola.compania|default:"Empresa no disponible" }}</p>
+                </div>
+            </div>
+        {% endfor %}    
+    {% endif %}
+</div>
+{% endblock content %} 
